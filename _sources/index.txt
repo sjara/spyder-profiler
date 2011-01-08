@@ -1,0 +1,41 @@
+.. spyder-profiler documentation master file, created by
+   sphinx-quickstart on Sat Jan  8 13:47:36 2011.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Profiler (spyder-profiler plugin)
+========================================
+
+The profiler plugin for `Spyder <http://packages.python.org/spyder>`_
+shows the time spent on each function/method during the execution of a
+program.
+
+.. toctree::
+   :maxdepth: 2
+
+
+Features to add
+---------------
+* Redirect to the function definition in editor when clicking on a
+  profiler item.
+* Color rows/cells according to totaltime
+* Add icon to first column according to entry type (function, module, ...)
+
+
+Issues and bugs
+---------------
+* Check that the combobox works as expected.
+
+  * Run profiler when selecting name on combobox.
+  * Store previous entries and results.
+
+* Profiling multithreaded programs has not been tested.
+
+
+Indices and tables
+------------------
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
