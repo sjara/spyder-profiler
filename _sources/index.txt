@@ -36,13 +36,11 @@ Issues and bugs
   calls for a function/method, not only the time/calls on that
   particular instance. For this reason, you may see nodes with longer
   times than their parents.
-* Check that the combobox works as expected.
-
-  * Run profiler when selecting name on combobox.
-  * Store previous entries and results.
-
+* The combobox is only used for selecting the file, it does not run the
+  profiler (you need to press the Profile button).
 * Profiling multithreaded programs has not been tested.
-* The icons do not differentiate between functions and methods.
+* The icons in the tree do not differentiate between functions and
+  methods.
 
 
 Other tools of visualizing profiles
