@@ -4,7 +4,8 @@
  ___________________
 
 
-This project provides a profiler plugin for the python IDE Spyder.
+This project provides a profiler plugin for Spyder (a python IDE).
+A profiler is a tool to measure where a program spends time.
 
 
 INSTALLATION
@@ -14,6 +15,7 @@ INSTALLATION
    SPYDERPATH/spyderlib/spyderplugins/
 2. Place  profilergui.py  in
    SPYDERPATH/spyderlib/spyderplugins/widgets/
+3. Restart Spyder.
 
 
 DOCUMENTATION
