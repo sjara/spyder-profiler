@@ -48,8 +48,8 @@ from spyderlib.config import get_font
 
 
 # FIXME: is this the right way to check for modules?
-#PROFILER_PATH = 'cProfile'
-PROFILER_PATH = 'profile'
+#PROFILER_PATH = 'profile'
+PROFILER_PATH = 'cProfile'
 PSTATS_PATH = 'pstats'
 
 def is_profiler_installed():
@@ -326,7 +326,8 @@ class ProfilerDataTree(QTreeWidget):
         '''Define root ignoring profiler-specific functions.'''
         # FIXME: this is specific to module 'profile' and has to be
         #        changed for cProfile
-        return ('', 0, 'execfile')        
+        #return ('', 0, 'execfile')     # For 'profile' module   
+        return ('~', 0, '<execfile>')     # For 'cProfile' module   
     
     def find_callees(self,parent):
         '''Find all functions called by (parent) function.'''
@@ -361,7 +362,7 @@ class ProfilerDataTree(QTreeWidget):
             if moduleName == '__init__.py':
                 modulePath, moduleName = os.path.split(modulePath)
             functionName = '<' + moduleName + '>'
-        if not fileName:
+        if not fileName or fileName=='~':
             fileAndLine = '(built-in)'
             nodeType = 'builtin'
         else:
@@ -439,8 +440,7 @@ def test():
     widget = ProfilerWidget(None)
     widget.show()
     #widget.analyze(__file__)
-    widget.analyze('/var/tmp/test006.py')
-    #widget.analyze('/var/tmp/test012_recursion.py')
+    widget.analyze('/var/tmp/test001.py')
     sys.exit(app.exec_())
     
 if __name__ == '__main__':
