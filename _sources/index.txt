@@ -12,8 +12,8 @@ program.
 
 .. image:: images/spyder_profiler.png
 
-The tree shows the results calculated by python's module 'profile' (or
-'cProfile'). Recursive calls appear only once and in lighter color.
+The tree shows the results calculated by python's module
+'cProfile'. Recursive calls appear only once and in lighter color.
 
 Note that the time and call values shown by this plugin are global to
 the execution of the program and not specific to a particular
