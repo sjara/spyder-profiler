@@ -10,26 +10,52 @@ The profiler plugin for `Spyder <http://packages.python.org/spyder>`_
 shows the time spent on each function/method during the execution of a
 program.
 
-.. toctree::
-   :maxdepth: 2
+.. image:: images/spyder_profiler.png
+
+The tree shows the results calculated by python's module 'profile' (or
+'cProfile'). Recursive calls appear only once and in lighter color.
+
+Note that the time and call values shown by this plugin are global to
+the execution of the program and not specific to a particular
+call. Because of this, some functions/methods may show longer times
+than their callers.
 
 
 Features to add
 ---------------
 * Redirect to the function definition in editor when clicking on a
   profiler item.
-* Color rows/cells according to totaltime
-* Add icon to first column according to entry type (function, module, ...)
-
+* Color rows/cells according to time spent.
+* Add icon to first column according to entry type (function, module, ...).
+* Features from other profilers (see below).
+* Show the class associated with each method.
 
 Issues and bugs
 ---------------
+* The data on each row corresponds to the total time or number of
+  calls for a function/method, not only the time/calls on that
+  particular instance. For this reason, you may see nodes with longer
+  times than their parents.
 * Check that the combobox works as expected.
 
   * Run profiler when selecting name on combobox.
   * Store previous entries and results.
 
 * Profiling multithreaded programs has not been tested.
+* The icons do not differentiate between functions and methods.
+
+
+Other tools of visualizing profiles
+-----------------------------------
+* `Matlab <http://www.mathworks.com/help/techdoc/matlab_env/f9-17018.html>`_:
+  `screenshot <http://www.mathworks.com/help/techdoc/matlab_env/tuning_refining2.png>`_
+* `RunSnakeRun <http://www.vrplumber.com/programming/runsnakerun/>`_:
+  `screenshot <http://www.vrplumber.com/programming/runsnakerun/screenshot-2.0.png>`_
+* `Gprof2Dot <http://code.google.com/p/jrfonseca/wiki/Gprof2Dot>`_:
+  `screenshot <http://wiki.jrfonseca.googlecode.com/hg/gprof2dot.png>`_
+* `kcachegrind <http://kcachegrind.sourceforge.net/html/Home.html>`_
+* `qPyProfiler <http://freshmeat.net/projects/qpyprofiler/>`_
+* `pythontracer <http://code.google.com/p/pythontracer/wiki/ExampleUse>`_
 
 
 Indices and tables
@@ -38,4 +64,7 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. .. toctree::
+..    :maxdepth: 2
 

@@ -38,6 +38,7 @@
 <li><a class="reference external" href="#">Profiler (spyder-profiler plugin)</a><ul>
 <li><a class="reference external" href="#features-to-add">Features to add</a></li>
 <li><a class="reference external" href="#issues-and-bugs">Issues and bugs</a></li>
+<li><a class="reference external" href="#other-tools-of-visualizing-profiles">Other tools of visualizing profiles</a></li>
 <li><a class="reference external" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
@@ -74,26 +75,52 @@
 <p>The profiler plugin for <a class="reference external" href="http://packages.python.org/spyder">Spyder</a>
 shows the time spent on each function/method during the execution of a
 program.</p>
-<ul class="simple">
-</ul>
+<img alt="_images/spyder_profiler.png" src="_images/spyder_profiler.png" />
+<p>The tree shows the results calculated by python&#8217;s module &#8216;profile&#8217; (or
+&#8216;cProfile&#8217;). Recursive calls appear only once and in lighter color.</p>
+<p>Note that the time and call values shown by this plugin are global to
+the execution of the program and not specific to a particular
+call. Because of this, some functions/methods may show longer times
+than their callers.</p>
 <div class="section" id="features-to-add">
 <h2>Features to add<a class="headerlink" href="#features-to-add" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Redirect to the function definition in editor when clicking on a
 profiler item.</li>
-<li>Color rows/cells according to totaltime</li>
-<li>Add icon to first column according to entry type (function, module, ...)</li>
+<li>Color rows/cells according to time spent.</li>
+<li>Add icon to first column according to entry type (function, module, ...).</li>
+<li>Features from other profilers (see below).</li>
+<li>Show the class associated with each method.</li>
 </ul>
 </div>
 <div class="section" id="issues-and-bugs">
 <h2>Issues and bugs<a class="headerlink" href="#issues-and-bugs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li>The data on each row corresponds to the total time or number of
+calls for a function/method, not only the time/calls on that
+particular instance. For this reason, you may see nodes with longer
+times than their parents.</li>
 <li>Check that the combobox works as expected.<ul>
 <li>Run profiler when selecting name on combobox.</li>
 <li>Store previous entries and results.</li>
 </ul>
 </li>
 <li>Profiling multithreaded programs has not been tested.</li>
+<li>The icons do not differentiate between functions and methods.</li>
+</ul>
+</div>
+<div class="section" id="other-tools-of-visualizing-profiles">
+<h2>Other tools of visualizing profiles<a class="headerlink" href="#other-tools-of-visualizing-profiles" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.mathworks.com/help/techdoc/matlab_env/f9-17018.html">Matlab</a>:
+<a class="reference external" href="http://www.mathworks.com/help/techdoc/matlab_env/tuning_refining2.png">screenshot</a></li>
+<li><a class="reference external" href="http://www.vrplumber.com/programming/runsnakerun/">RunSnakeRun</a>:
+<a class="reference external" href="http://www.vrplumber.com/programming/runsnakerun/screenshot-2.0.png">screenshot</a></li>
+<li><a class="reference external" href="http://code.google.com/p/jrfonseca/wiki/Gprof2Dot">Gprof2Dot</a>:
+<a class="reference external" href="http://wiki.jrfonseca.googlecode.com/hg/gprof2dot.png">screenshot</a></li>
+<li><a class="reference external" href="http://kcachegrind.sourceforge.net/html/Home.html">kcachegrind</a></li>
+<li><a class="reference external" href="http://freshmeat.net/projects/qpyprofiler/">qPyProfiler</a></li>
+<li><a class="reference external" href="http://code.google.com/p/pythontracer/wiki/ExampleUse">pythontracer</a></li>
 </ul>
 </div>
 <div class="section" id="indices-and-tables">
