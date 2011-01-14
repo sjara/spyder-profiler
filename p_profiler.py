@@ -66,7 +66,7 @@ class Profiler(ProfilerWidget, SpyderPluginMixin):
         Return the widget to give focus to when
         this plugin's dockwidget is raised on top-level
         """
-        return self.datatable
+        return self.datatree
     
     def get_plugin_actions(self):
         """Return a list of actions related to plugin"""

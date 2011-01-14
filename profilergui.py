@@ -137,7 +137,7 @@ class ProfilerWidget(QWidget):
         self.set_running_state(False)
         
         if not is_profiler_installed():
-            for widget in (self.datatable, self.filecombo,
+            for widget in (self.datatree, self.filecombo,
                            self.start_button, self.stop_button):
                 widget.setDisabled(True)
             if os.name == 'nt' \
