@@ -8,7 +8,8 @@ Profiler (spyder-profiler plugin)
 
 The profiler plugin for `Spyder <http://packages.python.org/spyder>`_
 shows the time spent on each function/method during the execution of a
-program.
+program. The source code can be downloaded from `github
+<https://github.com/sjara/spyder-profiler>`_.
 
 .. image:: images/spyder_profiler.png
 
